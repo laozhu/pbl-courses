@@ -85,11 +85,18 @@ https://github.com/你的用户名/pdf-courses
 
 做作业前，先开一条自己的「**小路**」，在小路上做，不影响主路。这条小路就叫「**branch（分支）**」。
 
-新建并切换到一条叫 `my-card` 的小路：
+新建并切换到一条带有你 **GitHub 用户名** 的小路，方便老师分辨是谁的作业。比如你的 GitHub 用户名是 `xiaoming`，分支就叫 `my-card-xiaoming`。
+
+规则：
+
+- 分支名必须包含你的 GitHub 用户名。
+- 推荐格式：`my-card-你的GitHub用户名`。
 
 ```bash
-git checkout -b my-card
+git checkout -b my-card-xiaoming
 ```
+
+> 把上面的 `xiaoming` 换成你自己的 GitHub 用户名。
 
 用这个命令看看自己现在站在哪条路上：
 
@@ -97,15 +104,33 @@ git checkout -b my-card
 git branch
 ```
 
-前面有个 `*` 星号的，就是你现在所在的分支，应该是 `my-card`。🌿
+前面有个 `*` 星号的，就是你现在所在的分支，应该是你刚才新建的 `my-card-xiaoming`（把 `xiaoming` 换成你的 GitHub 用户名）。🌿
 
-> 🌳 想象一棵大树：`main` 是主干，`my-card` 是你新长出来的一根小树枝。你可以在小树枝上安心尝试，不怕弄坏主干。
+> 🌳 想象一棵大树：`main` 是主干，`my-card-xiaoming` 是你新长出来的一根小树枝。你可以在小树枝上安心尝试，不怕弄坏主干。
 
 ---
 
 ## 🏁 关卡 4：做一张「自我介绍卡片」
 
-在 `tasks/01-learn-git/my-work/` 文件夹里，新建一个文件叫 `about-me.md`，写上你的自我介绍。
+先在 `tasks/01-learn-git/work/` 里面给自己建一个专属文件夹。
+
+规则：
+
+- 文件夹名必须包含你的 GitHub 用户名。
+- 推荐直接使用你的 GitHub 用户名，比如 `xiaoming`。
+- 不要把作品直接放在 `work/` 根目录里。
+
+比如你的 GitHub 用户名是 `xiaoming`，可以这样建：
+
+```bash
+mkdir -p tasks/01-learn-git/work/xiaoming
+```
+
+然后在自己的文件夹里新建一个文件叫 `about-me.md`，写上你的自我介绍。比如：
+
+```
+tasks/01-learn-git/work/xiaoming/about-me.md
+```
 
 可以照着下面这个样子写（换成你自己的内容）：
 
@@ -130,7 +155,7 @@ git branch
 git status
 ```
 
-你应该会看到 Git 说：有一个新文件 `about-me.md` 还没有被保存（它可能显示成红色）。
+你应该会看到 Git 说：你的专属文件夹里有一个新文件 `about-me.md` 还没有被保存（它可能显示成红色）。
 
 > 🔍 `git status` 就像一面镜子，随时告诉你「哪些东西改了、哪些还没存档」。这是最常用的命令，随时都可以敲一敲看看情况！
 
@@ -151,7 +176,7 @@ git add .
 **第二步：正式存档，并写一句「这次存了什么」**
 
 ```bash
-git commit -m "我的第一张自我介绍卡片"
+git commit -m "加入我的自我介绍卡片"
 ```
 
 > ✏️ 引号里的话叫「**commit 信息**」，用来记录你这次做了什么。就像给存档起个名字，以后一看就知道。
@@ -165,12 +190,14 @@ git commit -m "我的第一张自我介绍卡片"
 把你的存档「推」到 GitHub 上**你自己**那份项目里：
 
 ```bash
-git push -u origin my-card
+git push -u origin my-card-xiaoming
 ```
+
+> 把上面的 `xiaoming` 换成你自己的 GitHub 用户名。
 
 > ⚠️ 第一次 push 时，GitHub 可能会让你登录、验证身份，请大人帮忙一下（见文件最下面的〈**大人帮忙区**〉）。
 
-推成功后，去你自己那份项目的网页刷新一下，就能看到 `my-card` 这条小路和你的作品啦！☁️✨
+推成功后，去你自己那份项目的网页刷新一下，就能看到 `my-card-你的GitHub用户名` 这条小路和你的作品啦！☁️✨
 
 > 🚀 `push` 就是「推上去」的意思——把你电脑里的存档，推到网上。
 
@@ -187,7 +214,7 @@ git push -u origin my-card
 1. 打开**你自己**那份项目的 GitHub 网页。
 2. 页面上一般会出现一个提示：**「Compare & pull request」**，点它。
    - 如果没看到，就点 **「Contribute」** → **「Open pull request」**。
-3. 检查一下方向：是把 **你的 `my-card`** 合并到 **老师项目的 `main`**（页面上会显示两个仓库的名字，箭头从你的指向老师的）。
+3. 检查一下方向：是把 **你的 `my-card-你的GitHub用户名`** 合并到 **老师项目的 `main`**（页面上会显示两个仓库的名字，箭头从你的指向老师的）。
 4. 写个标题，比如：`加入我的自我介绍卡片`。
 5. 点绿色按钮 **「Create pull request」**。
 
@@ -197,11 +224,11 @@ git push -u origin my-card
 
 ## 🏁 关卡 9：归档你的成果 📁
 
-最后一步，把这次学习的成果整理好（这些都在你 `my-work/` 文件夹里）：
+最后一步，把这次学习的成果整理好（这些都在你自己的 `work/你的GitHub用户名/` 文件夹里）：
 
-1. ✅ 你的 `about-me.md`（已经在 `my-work/` 里了）。
-2. 📸 **截一张 PR 页面的图**，保存成图片（比如 `my-pr.png`），也放进 `my-work/` 文件夹，再 `git add .`、`git commit`、`git push` 一次，它就也出现在 PR 里啦。
-3. 📝 打开 `my-work/` 里的 `完成记录.md`，把你走过的每一关打上勾。
+1. ✅ 你的 `about-me.md`（已经在 `work/你的GitHub用户名/` 里了）。
+2. 📸 **截一张 PR 页面的图**，保存成图片（比如 `my-pr.png`），也放进 `work/你的GitHub用户名/` 文件夹，再 `git add .`、`git commit`、`git push` 一次，它就也出现在 PR 里啦。
+3. 📝 从 `work/_template/完成记录.md` 复制一份到 `work/你的GitHub用户名/完成记录.md`，把你走过的每一关打上勾。
 
 这样，你的作品就**永久归档**在这个任务里啦，以后随时能回来看自己第一次学 Git 的样子！🥳
 
@@ -229,7 +256,7 @@ git push -u origin my-card
 
 - [ ] 关卡 1：**Fork** 了老师的项目
 - [ ] 关卡 2：**Clone** 到自己电脑
-- [ ] 关卡 3：新建了 `my-card` 分支
+- [ ] 关卡 3：新建了 `my-card-你的GitHub用户名` 分支
 - [ ] 关卡 4：写好了 `about-me.md`
 - [ ] 关卡 5：会用 `git status`
 - [ ] 关卡 6：成功 `git add` + `git commit`
