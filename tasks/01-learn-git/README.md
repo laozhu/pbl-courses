@@ -32,16 +32,24 @@
 **这几个地方是什么关系？**
 
 ```mermaid
-flowchart TD
-    teacher["老师的 GitHub 仓库"]
-    student["你的 GitHub 仓库"]
-    computer["你的电脑文件夹"]
+flowchart LR
+    teacher["老师的 GitHub 仓库<br/>laozhu/pbl-courses"]
+    student["你的 GitHub 仓库<br/>你的用户名/pbl-courses"]
+    computer["你的电脑文件夹<br/>pbl-courses/"]
 
-    teacher -->|"1. Fork：复制到你的 GitHub 账号"| student
-    student -->|"2. Clone：下载到你的电脑"| computer
-    computer -->|"3. Commit：在电脑里存档"| computer
-    computer -->|"4. Push：上传到你的 GitHub 仓库"| student
-    student -->|"5. PR：请老师把你的作业收回老师仓库"| teacher
+    teacher -->|"1. Fork<br/>复制一份"| student
+    student -->|"2. Clone<br/>下载到电脑"| computer
+    computer -->|"3. Commit<br/>在电脑里存档"| computer
+    computer -->|"4. Push<br/>上传作业"| student
+    student -->|"5. Pull Request<br/>交给老师检查"| teacher
+
+    classDef teacherBox fill:#fff3cd,stroke:#d6a100,stroke-width:2px,color:#5f4300;
+    classDef studentBox fill:#dff7ff,stroke:#0096c7,stroke-width:2px,color:#004b63;
+    classDef computerBox fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20;
+
+    class teacher teacherBox;
+    class student studentBox;
+    class computer computerBox;
 ```
 
 记住一句话：**先复制老师的，再下载自己的；写完先存档，再上传；最后用 PR 交给老师。**
