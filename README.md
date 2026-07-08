@@ -41,7 +41,7 @@ pbl-learning/
 
 | 编号 | 任务 | 你会学到 | 状态 |
 |------|------|----------|------|
-| 01 | [学习 Git 和 GitHub](tasks/01-learn-git/README.md) | 保存作品、上传到网上、和别人分享代码 | ⬜ 待完成 |
+| 01 | [学习 Git 和 GitHub](tasks/01-learn-git/README.md) | fork、clone、commit、push，并提交 PR「交作业」 | ⬜ 待完成 |
 
 > 以后我们会往这张表里加更多好玩的任务！
 
