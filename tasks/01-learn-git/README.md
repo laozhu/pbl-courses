@@ -31,25 +31,17 @@
 
 **这几个地方是什么关系？**
 
-```
-老师的 GitHub 仓库
-        │
-        │ 1. Fork：复制到你的 GitHub 账号
-        ▼
-你的 GitHub 仓库
-        │
-        │ 2. Clone：下载到你的电脑
-        ▼
-你的电脑文件夹
-        │
-        │ 3. Commit：在电脑里存档
-        │ 4. Push：上传到你的 GitHub 仓库
-        ▼
-你的 GitHub 仓库
-        │
-        │ 5. PR：请老师把你的作业收回老师仓库
-        ▼
-老师的 GitHub 仓库
+```mermaid
+flowchart TD
+    teacher["老师的 GitHub 仓库"]
+    student["你的 GitHub 仓库"]
+    computer["你的电脑文件夹"]
+
+    teacher -->|"1. Fork：复制到你的 GitHub 账号"| student
+    student -->|"2. Clone：下载到你的电脑"| computer
+    computer -->|"3. Commit：在电脑里存档"| computer
+    computer -->|"4. Push：上传到你的 GitHub 仓库"| student
+    student -->|"5. PR：请老师把你的作业收回老师仓库"| teacher
 ```
 
 记住一句话：**先复制老师的，再下载自己的；写完先存档，再上传；最后用 PR 交给老师。**
