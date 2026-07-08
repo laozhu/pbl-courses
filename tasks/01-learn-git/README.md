@@ -54,7 +54,7 @@
 做完后，看看浏览器地址栏，网址会变成：
 
 ```
-https://github.com/你的用户名/pdf-courses
+https://github.com/你的用户名/pbl-courses
 ```
 
 看到是**你自己的用户名**，就成功啦！🎉 这一份就是「你的复印本」。
@@ -64,17 +64,17 @@ https://github.com/你的用户名/pdf-courses
 ## 🏁 关卡 2：Clone —— 下载到自己电脑 ⬇️
 
 1. 在**你自己**那份项目的网页上，点绿色的 **「Code」** 按钮。
-2. 选 **HTTPS**，复制那个网址（长得像 `https://github.com/你的用户名/pdf-courses.git`）。
+2. 选 **HTTPS**，复制那个网址（长得像 `https://github.com/你的用户名/pbl-courses.git`）。
 3. 打开终端，输入（把网址换成你刚才复制的）：
 
    ```bash
-   git clone https://github.com/你的用户名/pdf-courses.git
+   git clone https://github.com/你的用户名/pbl-courses.git
    ```
 
 4. 下载好后，进入这个项目文件夹：
 
    ```bash
-   cd pdf-courses
+   cd pbl-courses
    ```
 
 🎉 现在，整个项目就在你的电脑里啦！
