@@ -89,8 +89,18 @@ https://github.com/你的用户名/pbl-courses
 ## 🏁 关卡 2：Clone —— 下载到自己电脑 ⬇️
 
 1. 在**你自己**那份项目的网页上，点绿色的 **「Code」** 按钮。
-2. 选 **HTTPS**，复制那个网址（长得像 `https://github.com/你的用户名/pbl-courses.git`）。
-3. 打开终端，输入（把网址换成你刚才复制的）：
+2. 选择下载方式：
+   - 如果已经配置过 **SSH key**，优先选 **SSH**，复制长得像 `git@github.com:你的用户名/pbl-courses.git` 的网址。
+   - 如果还没有配置 SSH key，就选 **HTTPS**，复制长得像 `https://github.com/你的用户名/pbl-courses.git` 的网址。
+3. 打开终端，输入（把网址换成你刚才复制的）。
+
+   如果你选的是 SSH：
+
+   ```bash
+   git clone git@github.com:你的用户名/pbl-courses.git
+   ```
+
+   如果你选的是 HTTPS：
 
    ```bash
    git clone https://github.com/你的用户名/pbl-courses.git
